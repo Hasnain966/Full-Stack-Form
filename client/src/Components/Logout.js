@@ -7,7 +7,7 @@ function Logout({ setIsLoggedIn }) {
     const navigate = useNavigate();
 
     const handleLogout = () => {
-        axios.post("http://localhost:8000/logout", {}, { withCredentials: true })
+        axios.post("http://localhost:8001/logout", {}, { withCredentials: true })
             .then(response => {
                 if (response.status === 200) {
                     setIsLoggedIn(false);
